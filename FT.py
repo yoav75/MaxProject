@@ -1,21 +1,32 @@
 from flask import Flask, redirect, url_for, request
+import json
+import socket
 
 app = Flask(__name__)
-
+ToSend = []
+client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client.connect(('127.0.0.1', 8080))
 
 @app.route('/success')
 def success():
-    return 'Thanks for answering the survey'
+    while len(ToSend) != 0:
+        client.send(ToSend.pop(0).encode())
+    print(ToSend)
+    return 'Thanks for answering the survey%'
 
 
-@app.route('/QueB', methods=['POST', 'GET'])
-def QueB():
+@app.route('/Que', methods=['POST', 'GET'])
+def Que():
     if request.method == 'POST':
         ANS1 = request.form['WDYTATC']
+        ToSend.append(ANS1)
         Ans2 = request.form['GTC']
+        ToSend.append(Ans2)
         Ans3 = request.form['GTA']
+        ToSend.append(Ans3)
 
         print(ANS1,Ans2,Ans3)
+
         return redirect(url_for('success'))
     else:
         ANS1 = request.form['WDYTATC']
