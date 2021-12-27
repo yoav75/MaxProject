@@ -1,39 +1,43 @@
 from flask import Flask, redirect, url_for, request
 import json
 import socket
-
-app = Flask(__name__)
-ToSend = []
-client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect(('127.0.0.1', 5053))
-
-@app.route('/success')
-def success():
-    while len(ToSend) != 0:
-        client.send(ToSend.pop(0).encode())
-    return 'Thanks for answering the survey'
+from flask_classful import FlaskView
 
 
-@app.route('/Que', methods=['POST', 'GET'])
-def Que():
-    if request.method == 'POST':
-        ANS1 = request.form['WDYTATC']
-        ToSend.append(ANS1)
-        Ans2 = request.form['GTC']
-        ToSend.append(Ans2)
-        Ans3 = request.form['GTA']
-        ToSend.append(Ans3)
 
-        print(ANS1,Ans2,Ans3)
+class ClientA(FlaskView):
+    app = Flask(__name__)
+    def __init__(self):
+        self.BigData = []
+        self.SurveyData = {"Name": "a", "WDYTATC": "a", "GTC": 0, "GTA": 0, "GTS": 0}
 
-        return redirect(url_for('success'))
-    else:
-        ANS1 = request.form['WDYTATC']
-        Ans2 = request.form['GTC']
-        Ans3 = request.form['GTA']
-        print(ANS1, Ans2, Ans3)
-        return redirect(url_for('success'))
+    @app.route('/ThxPage')
+    def ThxPage(self):
+        self.BigData.append(self.SurveyData)
+        print(self.BigData, self.SurveyData)
+        return ('Thanks %s for answering the survey' % self.SurveyData["Name"])
+
+    @app.route('/Que', methods=['POST', 'GET'])
+    def Que(self):
+        if request.method == 'POST':
+            Name = request.form['Name']
+            self.SurveyData["Name"] = Name
+            Ans1 = request.form['WDYTATC']
+            self.SurveyData["WDYTATC"] = Ans1
+            Ans2 = request.form['GTC']
+            self.SurveyData["GTC"] = Ans2
+            Ans3 = request.form['GTA']
+            self.SurveyData["GTA"] = Ans3
+            Ans4 = request.form['GTS']
+            self.SurveyData["GTS"] = Ans4
+            print(self.SurveyData)
+
+            return redirect(url_for('ThxPage'))
 
 
+ClientA.register(ClientA.app,route_base = '/')
 if __name__ == '__main__':
-    app.run(debug=True)
+    MyClient = ClientA()
+    MyClient.app.run(debug=True)
+
+
