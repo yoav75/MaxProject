@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AdminPage</title>
+</head>
+<body>
+<h1>AdminPage</h1>
+<li><a href="{{ url_for('Concert') }}">Home</a></li>
+
+<form action = "http://localhost:5000/QueResults" method = "post">
+    <p>Whats the artist name:</p>
+    <p><input type = "text" name = "Name" /></p>
+    <p><input type = "submit" value = "submit" /></p>
+</form>
+</body>
+</html>
