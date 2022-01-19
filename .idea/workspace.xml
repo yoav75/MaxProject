@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6602ba92-2c92-4698-b9b9-b38d498f0113" name="Changes" comment="">
+    <list default="true" id="6602ba92-2c92-4698-b9b9-b38d498f0113" name="Changes" comment="finally the server works, sending still suck but...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FT.py" beforeDir="false" afterPath="$PROJECT_DIR$/FT.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +95,17 @@
       <option name="presentableId" value="Default" />
       <updated>1640193051213</updated>
     </task>
+    <task id="LOCAL‎00001" summary="finally the server works, sending still suck but...">
+      <created>1640264321498</created>
+      <option name="number" value="LOCAL‎00001" />
+      <option name="presentableId" value="LOCAL‎00001" />
+      <updated>1640264321498</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="finally the server works, sending still suck but..." />
+    <option name="LAST_COMMIT_MESSAGE" value="finally the server works, sending still suck but..." />
   </component>
 </project>
