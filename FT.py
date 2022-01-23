@@ -1,43 +1,44 @@
+import csv
+
+SurveyData = {"Name": "a", "WDYTATC": "a", "GTC": 0, "GTA": 0, "GTS": 0}
 from flask import Flask, redirect, url_for, request
-import json
-import socket
-from flask_classful import FlaskView
+app = Flask(__name__)
+
+class csv_file():
+    def __init__(self, data, Name, header):
+        self.Name = Name
+        self.header = header
+        self.data = data
+
+    def Write_Data(self):
+        with open('%s.csv' % self.Name, 'w', encoding='UTF8', newline='') as f:
+            writer = csv.writer(f)
+            # write the header
+            writer.writerow(self.header)
+            # write the data
+            writer.writerow(self.data)
+
+@app.route('/success')
+def success():
+    return 'Thanks %s for answering the survey' % SurveyData["Name"]
+
+
+@app.route('/Que', methods=['POST', 'GET'])
+def Que():
+    if request.method == 'POST':
+        Name = request.form['Name']
+        SurveyData["Name"] = Name
+        ANS1 = request.form['WDYTATC']
+        SurveyData["WDYTATC"] = ANS1
+        Ans2 = request.form['GTC']
+        SurveyData["GTC"] = Ans2
+        Ans3 = request.form['GTA']
+        SurveyData["GTA"] = Ans3
+
+        print(ANS1, Ans2, Ans3)
+        return redirect(url_for('success'))
 
 
 
-class ClientA(FlaskView):
-    app = Flask(__name__)
-    def __init__(self):
-        self.BigData = []
-        self.SurveyData = {"Name": "a", "WDYTATC": "a", "GTC": 0, "GTA": 0, "GTS": 0}
-
-    @app.route('/ThxPage')
-    def ThxPage(self):
-        self.BigData.append(self.SurveyData)
-        print(self.BigData, self.SurveyData)
-        return ('Thanks %s for answering the survey' % self.SurveyData["Name"])
-
-    @app.route('/Que', methods=['POST', 'GET'])
-    def Que(self):
-        if request.method == 'POST':
-            Name = request.form['Name']
-            self.SurveyData["Name"] = Name
-            Ans1 = request.form['WDYTATC']
-            self.SurveyData["WDYTATC"] = Ans1
-            Ans2 = request.form['GTC']
-            self.SurveyData["GTC"] = Ans2
-            Ans3 = request.form['GTA']
-            self.SurveyData["GTA"] = Ans3
-            Ans4 = request.form['GTS']
-            self.SurveyData["GTS"] = Ans4
-            print(self.SurveyData)
-
-            return redirect(url_for('ThxPage'))
-
-
-ClientA.register(ClientA.app,route_base = '/')
 if __name__ == '__main__':
-    MyClient = ClientA()
-    MyClient.app.run(debug=True)
-
-
+    app.run(debug=True)
