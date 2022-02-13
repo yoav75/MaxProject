@@ -6,9 +6,12 @@
 </head>
 <body>
 <h1>AdminPage</h1>
-<li><a href="{{ url_for('Concert') }}">Home</a></li>
-
-<form action = "http://localhost:5000/QueResults" method = "post">
+<ul>
+    {% for item in data %}
+    <li>{{data[item]}}</li>
+    {% endfor %}
+</ul>
+<form action = "http://localhost:5000/DashBoard" method = "post">
     <p>Whats the artist name:</p>
     <p><input type = "text" name = "Name" /></p>
     <p><input type = "submit" value = "submit" /></p>
