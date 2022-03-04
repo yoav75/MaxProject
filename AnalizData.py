@@ -35,7 +35,3 @@ dfNew = df.corr()
 fig = go.Figure(data=go.Heatmap(df_to_plotly(dfNew)))
 fig.show()
 
-fig = px.scatter(df, x='Glucose', y='Insulin')
-fig.update_traces(marker_color="turquoise", marker_line_color='rgb(8,48,107)', marker_line_width=1.5)
-fig.update_layout(title_text='Glucose and Insulin')
-fig.show()

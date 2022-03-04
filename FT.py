@@ -1,14 +1,9 @@
 import csv
 import pandas as pd
-import matplotlib.pyplot as plt
-from IPython import get_ipython
-import plotly.offline as py
-import plotly.graph_objs as go
-import plotly.tools as tls
-import plotly.express as px
-import numpy as np
 from flask import Flask, redirect, url_for, request, render_template
 import os
+import AnalizDataClass
+
 CSV_Path = r'C:\Users\User\Desktop\DAT\Data.csv'
 SurveyData = {
     "Name": [],
@@ -60,10 +55,8 @@ class Data_Base:
         }
         for line in f:
             line = line.strip('\n')
-            print(line)
             line_data = line.split(",")
             keys = SurveyData.keys()
-            print(line_data == keys)
             if line_data == keys:
                 pass
             else:
@@ -79,8 +72,13 @@ class Data_Base:
 
 @app.route('/DashBoard', methods=['POST', 'GET'])
 def DashBoard():
-    print(My_Data_Base.CSV_to_dict())
+    adc.PieChart()
     return render_template('HDashBoard.html', data=My_Data_Base.CSV_to_dict())
+
+
+@app.route('/Survey', methods=['POST', 'GET'])
+def Survey():
+    return render_template('Survey.html')
 
 
 @app.route('/success')
@@ -108,10 +106,13 @@ def Que():
             SurveyData["WYR"].append(Ans5)
             My_Data_Base.Update_Data([Name, Ans1, Ans2, Ans3, Ans4, Ans5])
             return redirect(url_for('DashBoard'))
+
+
         except:
             Answers.append("troll")
 
 
 if __name__ == '__main__':
+    adc = AnalizDataClass.ADC(CSV_Path)
     My_Data_Base = Data_Base()
     app.run()
