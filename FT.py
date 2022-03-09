@@ -3,15 +3,13 @@ import pandas as pd
 from flask import Flask, redirect, url_for, request, render_template
 import os
 import AnalizDataClass
+from datetime import datetime
 
 CSV_Path = r'C:\Users\User\Desktop\DAT\Data.csv'
 SurveyData = {
-    "Name": [],
-    "WDYTATC": [],
-    "GTC": [],
-    "GTA": [],
-    "GTS": [],
-    "WYR": []
+    "WouldYouRec": [],
+    "WouldYouDoItAgain": [],
+    "Date": []
 }
 Answers = []
 
@@ -33,12 +31,10 @@ class Data_Base:
 
     def Delete_data(self):
         Empty_SurveyData = {
-            "Name": [],
-            "WDYTATC": [],
-            "GTC": [],
-            "GTA": [],
-            "GTS": [],
-            "WYR": []
+            "WouldYouRec": [],
+            "WouldYouDoItAgain": [],
+            "Date": []
+
         }
         data = pd.DataFrame(Empty_SurveyData)
         data.to_csv(CSV_Path)
@@ -46,12 +42,10 @@ class Data_Base:
     def CSV_to_dict(self):
         f = open(CSV_Path)
         d = {
-            "Name": [],
-            "WDYTATC": [],
-            "GTC": [],
-            "GTA": [],
-            "GTS": [],
-            "WYR": []
+            "WouldYouRec": [],
+            "WouldYouDoItAgain": [],
+            "Date": []
+
         }
         for line in f:
             line = line.strip('\n')
@@ -60,25 +54,27 @@ class Data_Base:
             if line_data == keys:
                 pass
             else:
-                d["Name"].append(line_data[0])
-                d["WDYTATC"].append(line_data[1])
-                d["GTC"].append(line_data[2])
-                d["GTA"].append(line_data[3])
-                d["GTS"].append(line_data[4])
-                d["WYR"].append(line_data[5])
-        return d
+                d["WouldYouRec"].append(line_data[0])
+                d["WouldYouDoItAgain"].append(line_data[1])
+                d["Date"].append(line_data[2])
 
+        return d
 
 
 @app.route('/DashBoard', methods=['POST', 'GET'])
 def DashBoard():
-    adc.PieChart()
     return render_template('HDashBoard.html', data=My_Data_Base.CSV_to_dict())
+
+
+@app.route('/DashBoard/PieChart/<string:col>', methods=['GET', 'POST'])
+def DashBoardPieChart(col):
+    adc.PieChart(col)
+    return "Redirecting...."
 
 
 @app.route('/Survey', methods=['POST', 'GET'])
 def Survey():
-    return render_template('Survey.html')
+    return render_template('SurveyTwo.html')
 
 
 @app.route('/success')
@@ -90,29 +86,17 @@ def success():
 @app.route('/Que', methods=['POST', 'GET'])
 def Que():
     if request.method == 'POST':
-        try:
-            Answers.append("answer")
-            Name = request.form['Name']
-            SurveyData["Name"].append(Name)
-            Ans1 = request.form['WDYTATC']
-            SurveyData["WDYTATC"].append(Ans1)
-            Ans2 = request.form['GTC']
-            SurveyData["GTC"].append(Ans2)
-            Ans3 = request.form['GTA']
-            SurveyData["GTA"].append(Ans3)
-            Ans4 = request.form['GTS']
-            SurveyData["GTS"].append(Ans4)
-            Ans5 = request.form['WYR']
-            SurveyData["WYR"].append(Ans5)
-            My_Data_Base.Update_Data([Name, Ans1, Ans2, Ans3, Ans4, Ans5])
-            return redirect(url_for('DashBoard'))
-
-
-        except:
-            Answers.append("troll")
+        date = datetime.now()
+        WouldYouRec = request.form['WouldYouRec']
+        SurveyData["WouldYouRec"].append(WouldYouRec)
+        WouldYouDoItAgain = request.form['WouldYouDoItAgain']
+        SurveyData["WouldYouDoItAgain"].append(WouldYouDoItAgain)
+        SurveyData["Date"].append(date)
+        My_Data_Base.Update_Data([WouldYouRec, WouldYouDoItAgain, date])
+        return redirect(url_for('DashBoard'))
 
 
 if __name__ == '__main__':
-    adc = AnalizDataClass.ADC(CSV_Path)
     My_Data_Base = Data_Base()
+    adc = AnalizDataClass.ADC(CSV_Path)
     app.run()

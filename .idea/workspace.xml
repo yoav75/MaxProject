@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6602ba92-2c92-4698-b9b9-b38d498f0113" name="Changes" comment="finally the server works, sending still suck but...">
-      <change afterPath="$PROJECT_DIR$/AnalizDataClass.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client_secre.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MaxProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MaxProject.iml" afterDir="false" />
+    <list default="true" id="6602ba92-2c92-4698-b9b9-b38d498f0113" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/SurveyStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SurveyTwo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnalizData.py" beforeDir="false" afterPath="$PROJECT_DIR$/AnalizData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnalizDataClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/AnalizDataClass.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FT.py" beforeDir="false" afterPath="$PROJECT_DIR$/FT.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HDashBoard.html" beforeDir="false" afterPath="$PROJECT_DIR$/HDashBoard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Survey.html" beforeDir="false" afterPath="$PROJECT_DIR$/Survey.html" afterDir="false" />
@@ -23,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -39,6 +39,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/SkillzAutocomplete.zip" />
@@ -186,11 +187,18 @@
       <option name="presentableId" value="LOCAL‎00002" />
       <updated>1644752507547</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL‎00003" summary="a long way since last commit, data base+clinet+server up and running">
+      <created>1646374110315</created>
+      <option name="number" value="LOCAL‎00003" />
+      <option name="presentableId" value="LOCAL‎00003" />
+      <updated>1646374110315</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="finally the server works, sending still suck but..." />
-    <option name="LAST_COMMIT_MESSAGE" value="finally the server works, sending still suck but..." />
+    <MESSAGE value="a long way since last commit, data base+clinet+server up and running" />
+    <option name="LAST_COMMIT_MESSAGE" value="a long way since last commit, data base+clinet+server up and running" />
   </component>
 </project>
