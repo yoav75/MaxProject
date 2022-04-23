@@ -6,14 +6,9 @@ import plotly.express as px
 
 
 class ADC:
-    def __init__(self, csv):
-        self.csv = csv
-        self.df = pd.read_csv(self.csv)
 
-    def PieChart(self,col):
-        dist = self.df[col].value_counts()
-        print(dist.keys())
-        print(dist)
+    def PieChart(self,col,data):
+        dist = data[col].value_counts()
         colors = ['mediumturquoise', 'darkorange']
         trace = go.Pie(values=(np.array(dist)), labels=dist.index)
         layout = go.Layout(title=col)
@@ -21,5 +16,10 @@ class ADC:
         fig.update_traces(marker=dict(colors=colors, line=dict(color='#000000', width=2)))
         fig.show()
 
+
+    def lineChart(self,data):
+        data = data.sort_values(by="date")
+        fig = px.line(data, x="date", y="WouldYouDoItAgain", title='Life expectancy in Canada',)
+        fig.show()
     def BarChart(self, col):
-       return 0
+        return 0
