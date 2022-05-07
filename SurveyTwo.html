@@ -4,7 +4,8 @@
 <link rel="stylesheet" type="text/css" href="SurveyStyle.css">
 <form action = "http://localhost:5000/Que" method = "post">
     <div id = "Que">
-    <input type="hidden" name="ip" value="<?=$ip;?>">
+    <input type="hidden" name="Name" value="{{Name}}">
+    <input type="hidden" name="PeopleNumber" value="{{PeopleNumber}}">
     <p>WouldYouRec:</p>
     <input type="radio" name="WouldYouRec" value="1"> 1
     <input type="radio" name="WouldYouRec" value="2"> 2
