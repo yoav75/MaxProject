@@ -1,0 +1,71 @@
+#UserNameInput{
+/* Layout Properties */
+Position: absolute;
+top: 473px;
+left: 681px;
+width: 601px;
+height: 77px;
+/* UI Properties */
+background: #F3F3F3 0% 0% no-repeat padding-box;
+opacity: 1;
+text-align: center;
+font: normal normal 300 30px/41px Open Sans;
+letter-spacing: 0.6px;
+color: #B5B5B5;
+opacity: 1;
+}
+#PasswordInput{
+/* Layout Properties */
+Position: absolute;
+top: 582px;
+left: 681px;
+width: 601px;
+height: 77px;
+/* UI Properties */
+background: #F3F3F3 0% 0% no-repeat padding-box;
+opacity: 1;
+text-align: center;
+font: normal normal 300 30px/41px Open Sans;
+letter-spacing: 0.6px;
+color: #B5B5B5;
+opacity: 1;
+}
+
+#SubmitLogin{
+/* Layout Properties */
+Position: absolute;
+top: 745px;
+left: 681px;
+width: 601px;
+height: 77px;
+/* UI Properties */
+background: #2093EB 0% 0% no-repeat padding-box;
+opacity: 1;
+text-align: center;
+font: normal normal 600 30px/41px Open Sans;
+letter-spacing: 0.6px;
+color: #FFFFFF;
+opacity: 1;
+}
+#ForgotPassword{
+Position: absolute;
+top: 854px;
+left: 681px;
+width: 168px;
+height: 34px;
+text-align: center;
+text-decoration: underline;
+font: normal normal 600 25px/34px Open Sans;
+letter-spacing: 0.5px;
+color: #707070;
+opacity: 1;
+}
+
+#logo{
+Position: absolute;
+top: 227px;
+left: 897px;
+width: 229px;
+height: 214px;
+opacity: 1;
+}

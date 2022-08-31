@@ -1,0 +1,123 @@
+#artistform{
+position: absolute;
+top: 440px;
+left: 263px;
+width: 1242px;
+height: 228px;
+background: #F1F1F1 0% 0% no-repeat padding-box;
+border-radius: 1px;
+opacity: 1;
+}
+#ArtistIA{
+/* Layout Properties */
+position: absolute;
+top: 498px;
+left: 1074px;
+width: 281px;
+height: 36px;
+/* UI Properties */
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 2px 3px #0000000D;
+opacity: 1;
+}
+#ArtistQA{
+position: absolute;
+top: 480px;
+left: 1360px;
+width: 300px;
+height: 28px;
+text-align: left;
+font: normal normal normal 20px/27px Open Sans;
+letter-spacing: 0px;
+color: #272D3B;
+opacity: 1;
+}
+#ArtistIB{
+/* Layout Properties */
+position: absolute;
+top: 555px;
+left: 1074px;
+width: 281px;
+height: 36px;
+/* UI Properties */
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 2px 3px #0000000D;
+opacity: 1;
+}
+#ArtistQB{
+position: absolute;
+top: 539px;
+left: 1360px;
+width: 170px;
+height: 28px;
+text-align: left;
+font: normal normal normal 20px/27px Open Sans;
+letter-spacing: 0px;
+color: #272D3B;
+opacity: 1;
+}
+#ASsubmit{
+position: absolute;
+top: 490px;
+left: 285px;
+width: 133px;
+height: 32px;
+background: #F7A14B 0% 0% no-repeat padding-box;
+box-shadow: 0px 2px 3px #0000000D;
+border-radius: 4px;
+opacity: 1;
+}
+#ArtistIC{
+position: absolute;
+top: 612px;
+left: 1075px;
+width: 281px;
+height: 36px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 2px 3px #0000000D;
+opacity: 1;
+}
+#ArtistQC{
+position: absolute;
+top: 600px;
+left: 1360px;
+width: 150px;
+height: 28px;
+text-align: left;
+font: normal normal normal 20px/27px Open Sans;
+letter-spacing: 0px;
+color: #272D3B;
+opacity: 1;
+}
+#logo{
+Position: absolute;
+top: 175px;
+left: 800px;
+width: 229px;
+height: 214px;
+opacity: 1;
+}
+#ArtistID{
+position: absolute;
+top: 498px;
+left: 631px;
+width: 281px;
+height: 36px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 2px 3px #0000000D;
+opacity: 1;
+}
+#ArtistQD{
+position: absolute;
+/* Layout Properties */
+top: 480px;
+left: 938px;
+width: 115px;
+height: 28px;
+/* UI Properties */
+text-align: left;
+font: normal normal normal 20px/27px Open Sans;
+letter-spacing: 0px;
+color: #272D3B;
+opacity: 1;
+}

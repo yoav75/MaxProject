@@ -1,0 +1,22 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+<link href="{{ url_for('static', filename='loginstyle.css') }}" rel="stylesheet" type="text/css" />
+<img src="{{ url_for('static', filename='logo.png') }}" id="logo">
+<form action = "/register" method = "post" >
+
+    <input type = "text" name = "Email" placeholder="User name" id="UserNameInput"/>
+    <p></p>
+    <input type = "text" placeholder="Password" name = "Password" id="PasswordInput"/>
+    <p></p>
+    <p><input type = "submit" value = "submit" id="SubmitLogin" /></p>
+    <p></p>
+</form>
+
+<a href="http://10.100.102.10:5000/ForgotPassword" id="ForgotPassword">Already have an account?</a>
+
+</body>
+</html>

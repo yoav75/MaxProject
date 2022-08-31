@@ -1,0 +1,33 @@
+@import "compass/css3";
+
+
+
+html{
+  min-height: 100%; 
+  background: #F4F7FC;
+  /*border: 120px solid;
+  border-top-color: #205A44;
+  border-left-color: #236C50;
+  border-bottom-color: #80DFBA;
+  border-right-color: #6DD5AD;  */
+  box-sizing: border-box;  
+  *,
+  *:before,
+  *:after{
+    box-sizing: border-box;
+  }  
+}
+body{   
+  width: 450px;
+  height: 100px;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  margin: auto;
+  padding: 30px 140px;
+  text-align: center;
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: 0px 13px 10px -13px #000, 0px 7px 10px rgba(0,0,0,.1); 
+}
+
+

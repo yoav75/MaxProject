@@ -1,0 +1,46 @@
+<html>
+<body>
+<link href="{{ url_for('static', filename='DBstyle.css') }}" rel="stylesheet" type="text/css" />
+<div id=" back"></div>
+<div id="income"></div>
+<h1 id="YearlyIncomeA">Income</h1>
+<h1 id="YearlyIncomeB"> 1,000,000 </h1>
+
+<div id="Workshops"></div>
+<h1 id="WorkshopsA">total workshops</h1>
+<h1 id="WorkshopsB"> {154} </h1>
+
+<div id="satisfaction"></div>
+<h1 id="satisfactionA">average satisfaction</h1>
+<h1 id="satisfactionB"> {{giga_avg}} </h1>
+
+<div id="SideBar"></div>
+<div id="LinkA"></div>
+<div id="LinkB"></div>
+<div id="LinkC"></div>
+<div id="LinkD"></div>
+<div id="LinkE"></div>
+<div id="LinkF"></div>
+<div id="LinkG"></div>
+
+<a href="/CS" id="HomePageLink">בית</a>
+<a href="/DashBoard" id="DashBoardLink">DashBoard</a>
+<a href="/CS" id="MessagesLink">הודעות</a>
+<a href="/CS" id="ScheduleLink" >לוח סדנאות</a>
+<a href="/CS" id="CustomersLink" >לקוחות</a>
+<a href="/logout" id="ChatLink" >Logout</a>
+<a href="/CS" id="SettingsLink" >הגדרות</a>
+<div id="main"></div>
+<div id='chart' class='chart'></div>
+<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+<script type='text/javascript'>
+  var graphs = {{graphJSON | safe}};
+  Plotly.plot('chart',graphs,{});
+</script>
+<h1 id="ArtistA"> {{ artist_rating[0][0] }} {{ artist_rating[0][1] }}</h1>
+<h1 id="ArtistB"> {{ artist_rating[1][0] }} {{ artist_rating[1][1] }}</h1>
+<h1 id="ArtistC"> {{ artist_rating[2][0] }} {{ artist_rating[2][1] }}</h1>
+<h1 id="ArtistD"> {{ artist_rating[3][0] }} {{ artist_rating[3][1] }}</h1>
+<h1 id="ArtistE"> {{ artist_rating[4][0] }} {{ artist_rating[4][1] }}</h1>
+</body>
+</html>

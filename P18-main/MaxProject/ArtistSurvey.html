@@ -1,0 +1,21 @@
+<html>
+<body>
+<link href="{{ url_for('static', filename='ASstyle.css') }}" rel="stylesheet" type="text/css" />
+<div id="artistform"></div>
+<img src="{{ url_for('static', filename='logo.png') }}" id="logo">
+<form action ="/generateQR" method = "post">
+    <p id="ArtistQA">Whats your name:</p>
+    <p><input type = "text" name = "Name" id="ArtistIA"/></p>
+    <p id="ArtistQB">audience number:</p>
+    <p><input type = "text" name = "peoplenum" id="ArtistIB"/></p>
+    <p id="ArtistQC">Show name:</p>
+    <p><input id="ArtistIC" type = "text" name = "showname" /></p>
+    <p id="ArtistQD">email:</p>
+    <p><input id="ArtistID" type = "text" name = "receiver_email" /></p>
+    <p></p>
+    <p><input id="ASsubmit" type = "submit" value = "submit" /></p>
+</form>
+
+
+</body>
+</html>

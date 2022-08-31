@@ -1,0 +1,377 @@
+#back{
+position: absolute;
+top: 0px;
+left: 0px;
+width: 1920px;
+height: 1798px;
+background: #F4F7FC 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 6px #00000029;
+opacity: 1;
+}
+#income{
+position: absolute;
+top: 229px;
+left: 81px;
+width: 459px;
+height: 114px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 2px 15px #0000001A;
+border-radius: 10px;
+opacity: 1
+}
+#YearlyIncomeA{
+/* Layout Properties */
+position: absolute;
+top: 230px;
+left: 247px;
+width: 128px;
+height: 34px;
+/* UI Properties */
+text-align: left;
+font: normal normal normal 25px/34px Open Sans;
+letter-spacing: 0.5px;
+color: #707070;
+opacity: 1;
+}
+#YearlyIncomeB{
+/* Layout Properties */
+position: absolute;
+top: 270px;
+left: 230px;
+width: 122px;
+height: 41px;
+/* UI Properties */
+text-align: center;
+font: normal normal 600 30px/41px Open Sans;
+letter-spacing: 0.6px;
+color: #2093EB;
+opacity: 1;
+}
+#Workshops{
+position: absolute;
+top: 229px;
+left: 567px;
+width: 601px;
+height: 114px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 2px 15px #0000001A;
+border-radius: 10px;
+opacity: 1;
+}
+#LinkA{
+position: absolute;
+top: 329px;
+left: 1705px;
+width: 212px;
+height: 53px;
+background: #F9F9F9 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+#LinkB{
+position: absolute;
+top: 388px;
+left: 1705px;
+width: 212px;
+height: 53px;
+background: #F9F9F9 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+#LinkC{
+position: absolute;
+top: 448px;
+left: 1705px;
+width: 212px;
+height: 53px;
+background: #F9F9F9 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+#LinkD{
+position: absolute;
+top: 507px;
+left: 1705px;
+width: 212px;
+height: 53px;
+background: #F9F9F9 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+#LinkE{
+position: absolute;
+top: 566px;
+left: 1705px;
+width: 212px;
+height: 53px;
+background: #F9F9F9 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+#LinkF{
+position: absolute;
+top: 625px;
+left: 1705px;
+width: 212px;
+height: 53px;
+background: #F9F9F9 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+#LinkG{
+position: absolute;
+top: 684px;
+left: 1705px;
+width: 212px;
+height: 53px;
+background: #F9F9F9 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+#WorkshopsA{
+position: absolute;
+top: 230px;
+left: 625px;
+width: 476px;
+height: 34px;
+text-align: center;
+font: normal normal normal 25px/34px Open Sans;
+letter-spacing: 0.5px;
+color: #707070;
+opacity: 1;
+}
+#WorkshopsB{
+/* Layout Properties */
+position: absolute;
+top: 270px;
+left: 837px;
+width: 52px;
+height: 41px;
+/* UI Properties */
+text-align: center;
+font: normal normal 600 30px/41px Open Sans;
+letter-spacing: 0.6px;
+color: #2093EB;
+opacity: 1;
+}
+#satisfaction{
+position: absolute;
+/* Layout Properties */
+top: 229px;
+left: 1184px;
+width: 459px;
+height: 114px;
+/* UI Properties */
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 2px 15px #0000001A;
+border-radius: 10px;
+opacity: 1;
+}
+#satisfactionA{
+position: absolute;
+/* Layout Properties */
+top: 230px;
+left: 1296px;
+width: 232px;
+height: 34px;
+/* UI Properties */
+text-align: left;
+font: normal normal normal 25px/34px Open Sans;
+letter-spacing: 0.5px;
+color: #707070;
+opacity: 1;
+}
+#satisfactionB{
+position: absolute;
+/* Layout Properties */
+top: 270px;
+left: 1390px;
+width: 44px;
+height: 41px;
+/* UI Properties */
+text-align: center;
+font: normal normal 600 30px/41px Open Sans;
+letter-spacing: 0.6px;
+color: #00BF18;
+opacity: 1;
+}
+#SideBar{
+position: absolute;
+border: 1px solid #f00;
+top: 229px;
+left: 1706px;
+width: 212px;
+height: 1704px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+#HomePageLink{
+position: absolute;
+
+top: 343px;
+left: 1806px;
+width: 29px;
+height: 24px;
+text-align: left;
+font: normal normal medium 18px/27px Poppins;
+letter-spacing: 0px;
+color: #4D4F5C;
+opacity: 1;
+}
+#DashBoardLink{
+position: absolute;
+
+top: 402px;
+left: 1806px;
+width: 59px;
+height: 24px;
+text-align: left;
+font: normal normal medium 18px/27px Poppins;
+letter-spacing: 0px;
+color: #2093EB;
+opacity: 1;
+}
+#MessagesLink{
+position: absolute;
+/* Layout Properties */
+top: 462px;
+left: 1809px;
+width: 56px;
+height: 24px;
+/* UI Properties */
+text-align: left;
+font: normal normal medium 18px/27px Poppins;
+letter-spacing: 0px;
+color: #4D4F5C;
+opacity: 1;
+}
+#ScheduleLink{
+position: absolute;
+/* Layout Properties */
+top: 521px;
+left: 1809px;
+width: 91px;
+height: 25px;
+/* UI Properties */
+text-align: left;
+font: normal normal medium 18px/27px Poppins;
+letter-spacing: 0px;
+color: #4D4F5C;
+opacity: 1;
+}
+#CustomersLink{
+position: absolute;
+/* Layout Properties */
+top: 580px;
+left: 1809px;
+width: 57px;
+height: 24px;
+/* UI Properties */
+text-align: left;
+font: normal normal medium 18px/27px Poppins;
+letter-spacing: 0px;
+color: #4D4F5C;
+opacity: 1;
+}
+#ChatLink{
+position: absolute;
+/* Layout Properties */
+top: 638px;
+left: 1809px;
+width: 27px;
+height: 25px;
+/* UI Properties */
+text-align: left;
+font: normal normal medium 18px/27px Poppins;
+letter-spacing: 0px;
+color: #4D4F5C;
+opacity: 1;
+}
+#SettingsLink{
+position: absolute;
+/* Layout Properties */
+top: 698px;
+left: 1809px;
+width: 58px;
+height: 24px;
+/* UI Properties */
+text-align: left;
+font: normal normal medium 18px/27px Poppins;
+letter-spacing: 0px;
+color: #4D4F5C;
+opacity: 1;
+
+}
+#main{
+position: absolute;
+top: 370px;
+left: 81px;
+width: 1573px;
+height: 639px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 2px 15px #0000001A;
+border-radius: 10px;
+opacity: 1;
+}
+#chart{
+position: absolute;
+top: 492px;
+left: 172px;
+width: 934px;
+height: 473px;
+opacity: 1;
+}
+#ArtistA{
+position: absolute;
+/* Layout Properties */
+top: 486px;
+left: 1262px;
+width: 332px;
+height: 60px;
+/* UI Properties */
+background: #F1F1F1 0% 0% no-repeat padding-box;
+border-radius: 1px;
+opacity: 1;
+}
+#ArtistB{
+position: absolute;
+/* Layout Properties */
+top: 566px;
+left: 1262px;
+width: 332px;
+height: 60px;
+/* UI Properties */
+background: #F1F1F1 0% 0% no-repeat padding-box;
+border-radius: 1px;
+opacity: 1;
+}
+#ArtistC{
+position: absolute;
+/* Layout Properties */
+top: 646px;
+left: 1262px;
+width: 332px;
+height: 60px;
+/* UI Properties */
+background: #F1F1F1 0% 0% no-repeat padding-box;
+border-radius: 1px;
+opacity: 1;
+}
+#ArtistD{
+position: absolute;
+/* Layout Properties */
+top: 726px;
+left: 1262px;
+width: 332px;
+height: 60px;
+/* UI Properties */
+background: #F1F1F1 0% 0% no-repeat padding-box;
+border-radius: 1px;
+opacity: 1;
+}
+#ArtistE{
+position: absolute;
+/* Layout Properties */
+top: 806px;
+left: 1262px;
+width: 332px;
+height: 60px;
+/* UI Properties */
+background: #F1F1F1 0% 0% no-repeat padding-box;
+border-radius: 1px;
+opacity: 1;
+}
